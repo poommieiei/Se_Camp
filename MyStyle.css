@@ -8,6 +8,16 @@ h1 {
     color: black;
 }
 
+body{
+    width: 60%;
+    height: 60%;
+    height: 70vh;
+}
+
+marquee{
+    height: 70vh;
+}
+
 .myfont{
     font-family: 'Kanit', sans-serif;
 }
@@ -35,7 +45,7 @@ h1 {
     text-align: center;
     border: 5px dashed rgb(0, 0, 0);
     padding-top: 5px;
-    margin: 25px 25px;
+    margin: 20px 20px;
     font-size: 24px;
 }
 
@@ -43,6 +53,25 @@ p{
     margin-top: 170px;
 }
 
+p.normal{
+    font-style: normal;
+    font-weight: bold;
+}
+
+p.italic{
+    font-style: italic;
+    font-weight: bold;
+}
+
+div > div > p{
+    font-size: larger;
+    font-weight: bold;
+}
+
+div > p{
+    font-size: smaller;
+    font-weight: bold;
+}
 .box:hover{
     animation: rainbow-bg 2.5s linear;
 	animation-iteration-count: infinite;
@@ -55,6 +84,14 @@ a:link{
     animation: rainbow 2.5s linear;
 	animation-iteration-count: infinite;
 }
+
+.box2{
+    position: relative;
+    left: 30px;
+  
+    background-color: #aea0a0;
+}
+
 
 @keyframes rainbow{
     100%,0%{
