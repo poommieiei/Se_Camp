@@ -5,7 +5,8 @@ Comment
 h1 {
     font-family: 'Itim', cursive;
     font-size: 36pt;
-    color: black;
+    animation: rainbow 1s linear;
+	animation-iteration-count: infinite;
 }
 
 body{
@@ -14,27 +15,21 @@ body{
     height: 70vh;
 }
 
-marquee{
-    height: 70vh;
-}
-
-.myfont{
-    font-family: 'Kanit', sans-serif;
-}
-
-.coRed{
-    color: red ;
-}
-
-#myP{
-    font-size: 56pt;
+div{
+    text-align: center;
+    height: 240px;
+    width: 200px;
+    animation: rainbow 2.5s linear;
+	animation-iteration-count: infinite;
+    overflow: scroll;
+    
 }
 
 .rainbow-text {
     background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);  
      -webkit-background-clip: text;
     color: transparent;
-  }
+}
 
 .box{
     width: 400px;
@@ -47,51 +42,6 @@ marquee{
     padding-top: 5px;
     margin: 20px 20px;
     font-size: 24px;
-}
-
-p{
-    margin-top: 170px;
-}
-
-p.normal{
-    font-style: normal;
-    font-weight: bold;
-}
-
-p.italic{
-    font-style: italic;
-    font-weight: bold;
-}
-
-div > div > p{
-    font-size: larger;
-    font-weight: bold;
-}
-
-div > p{
-    font-size: smaller;
-    font-weight: bold;
-}
-
-
-.box:hover{
-    animation: rainbow-bg 2.5s linear;
-	animation-iteration-count: infinite;
-    color: #000;;
-    box-shadow: 10px 10px 10px 10px black;
-}
-
-a:link{
-    font-size: 90px;
-    animation: rainbow 2.5s linear;
-	animation-iteration-count: infinite;
-}
-
-.box2{
-    position: relative;
-    left: 30px;
-  
-    background-color: #aea0a0;
 }
 
 
