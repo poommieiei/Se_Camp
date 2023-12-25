@@ -80,7 +80,19 @@
         : <?php echo $key; ?><
         : <?php echo $value; ?></h3>
     <?php } ?>
-        
+    <?php
+    pre($arry);
+
+    ?>
+
+    <?php
+    function pre($value){
+        echo "<pre>1";
+            print_r($value);
+            echo "</pre>";
+    }
+    
+    ?>
 
 </body>
 
