@@ -29,7 +29,7 @@ Route::get('/my-route', function(){
 
 
 Route::post('/my-route', function(Request $req){
-    // $data['myinput'] = $req->input('myinput');
+    $data['myinput'] = $req->input('myinput');
     // $data['myinput'] = "laravel";
     return view('test',$data);
 });
