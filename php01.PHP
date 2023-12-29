@@ -29,15 +29,7 @@
     <?php echo $var_c = "Hello $var_a" ?>
 
     $varc += $var_b = 1;
-    <?php if(){
-
-    }
-    else if(){
-
-    }
-    else{
-
-    }
+   
 </body>
 
 

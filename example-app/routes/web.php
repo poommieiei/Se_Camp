@@ -20,16 +20,12 @@ Route::get('/', function () {
 
 Route::get('/my-route', function(){
 
-    $data = ['val_a' => 'Hello World!!!!!!'];
-
-    $data['val_b'] = "Laravel";
-
-    return view('myfolder.myPage',$data);
+    return view('myfolder.Mutiplication_Table');
 });
 
 
 Route::post('/my-route', function(Request $req){
     $data['myinput'] = $req->input('myinput');
-    // $data['myinput'] = "laravel";
-    return view('test',$data);
+
+    return view('myfolder.Mutiplication_Table',$data);
 });
