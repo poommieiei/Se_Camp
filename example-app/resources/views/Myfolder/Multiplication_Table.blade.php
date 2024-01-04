@@ -2,12 +2,13 @@
 
 
 <head>
-    <title>Gay</title>
+    <title>Meawwwwwww!!!</title>
     <meta charset="utf-8" />
 
     <style>
         div {
             text-align: center;
+
         }
         div div{
 
@@ -15,13 +16,15 @@
             margin: 0 auto;
             width: 20%;
             height: 30%;
+            font-size: 18px;
+            background-color: #dd3d52
         }
     </style>
 </head>
 
 
 
-<body style="background: #fddbfe">
+<body style="background: #409fb4">
 
     <div>
         <h1>ตารางแม่สูตรคูณ</h1>
@@ -52,7 +55,6 @@
                     }
                 ?>
             </div>
-
 
     </div>
 </body>
