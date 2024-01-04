@@ -6,18 +6,20 @@
     <meta charset="utf-8" />
 
     <style>
+
         div {
             text-align: center;
 
         }
         div div{
-
-            overflow: scroll;
+            overflow: auto;
             margin: 0 auto;
             width: 20%;
-            height: 30%;
-            font-size: 18px;
-            background-color: #dd3d52
+            height: 45%;
+            font-size: 22px;
+            border:4px solid black;
+            padding:5px;
+            background-color:#ffdb58;
         }
     </style>
 </head>
@@ -29,21 +31,24 @@
     <div>
         <h1>ตารางแม่สูตรคูณ</h1>
 
-            <form method="POST" action="/my-route">
+            <form method="POST" action="/my-multiple">
                 @csrf
                 <input type="number" name="myinput" />
                 <br><br>
                 <button type="submit">Submit</button>
             </form>
+            <?php
+            if(isset($myinput)){
+                $num = $myinput;
+            }
+            else{
+                $num = 0;
+            }
+            echo "<h1> คูณแม่ $num </h1>";?>
+
             <div>
                 <?php
-                    if(isset($myinput)){
-                        $num = $myinput;
-                    }
-                    else{
-                        $num = 0;
-                    }
-                    echo "<h1> คูณแม่ $num </h1>";
+
 
                     if ($num != 0) {
                         for($i = 1 ; $i <= 24 ; $i++){

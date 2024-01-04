@@ -29,12 +29,26 @@ Route::get('/', function () {
 });
 
 Route::get('/my-route', function(){
+    // return view('myroute');
+    //        Key    =>  Value
+    $data = ['val_a' => 'Hello World!'];
+    $data['val_b'] = "Laravel";
+    return view('Myfolder.myPage',$data);
+});
+
+
+Route::post('/my-route', function(Request $req){
+    $data['myinput'] =  $req->input('myinput');
+    return view('myroute', $data);
+});
+
+Route::get('/my-multiple', function(){
 
     return view('Myfolder.Multiplication_Table');
 });
 
 
-Route::post('/my-route', function(Request $req){
+Route::post('/my-multiple', function(Request $req){
     $data['myinput'] = $req->input('myinput');
 
     return view('Myfolder.Multiplication_Table',$data);
