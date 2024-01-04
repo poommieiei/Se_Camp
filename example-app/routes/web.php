@@ -20,12 +20,12 @@ Route::get('/', function () {
 
 Route::get('/my-route', function(){
 
-    return view('myfolder.Mutiplication_Table');
+    return view('Myfolder.Multiplication_Table');
 });
 
 
 Route::post('/my-route', function(Request $req){
     $data['myinput'] = $req->input('myinput');
 
-    return view('myfolder.Mutiplication_Table',$data);
+    return view('Myfolder.Multiplication_Table',$data);
 });
