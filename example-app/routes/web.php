@@ -16,11 +16,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/my-controller', [MyController::class, 'index']);
+Route::get('/my-controller', [MyController::class, 'index']);
 // Route::get('/my-controller2', 'App\Http\Controllers\MyController@index');
-Route::namespace('App\Http\Controllers')->group(function(){
-    Route::get('/my-controller3', 'MyController@index');
-});
+// Route::namespace('App\Http\Controllers')->group(function(){
+//     Route::get('/my-controller3', 'MyController@index');
+// });
 
 // Route::resource('/my-controller4', MyController::class);
 
