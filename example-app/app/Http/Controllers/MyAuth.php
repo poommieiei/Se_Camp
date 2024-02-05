@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Auth;
-
 
 class MyAuth extends Controller
 {
@@ -14,25 +14,22 @@ class MyAuth extends Controller
     }
 
     function login_process(Request $req){
-        $req->vaildate([
-            // 'email' => 'required|email',
-            // 'password' => 'required|min:6',
+        $req->validate([
+        'email' => 'required|email',
+        'password' => 'required|min:6',
         ]);
 
         $data = $req->all();
-        print_r($data);
-        die;
-
         if(Auth::attempt(['email' => $data['email'], 'password' => $data['password']])){
             return Redirect::to('titles');
-        }
-        else{
+        }else{
             return Redirect::to('login');
         }
     }
 
     function logout_process(){
-
+        Auth::logout();
+        return Redirect::to('login');
     }
 
     function register_view(){
@@ -40,11 +37,16 @@ class MyAuth extends Controller
     }
 
     function register_process(Request $req){
-        $name = $req->input('name');
-        $email = $req->input('email');
-        $password = $req->input('password');
-        User::created(['name' => $name, 'email' => $email, 'password' => $password]);
+        $req->validate([
+        'name' => 'required',
+        'email' => 'required|email|unique:users',
+        'password' => 'required|min:6|confirmed',
+        ]);
 
-        return Redireact::to('login');
+        $data = $req->all();
+
+        User::create($data);
+
+        return Redirect::to('login');
     }
 }

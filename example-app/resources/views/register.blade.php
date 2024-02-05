@@ -30,7 +30,7 @@
                 <form action="{{ url('register') }}" method="post">
                     @csrf
                     <div class="input-group mb-3">
-                        <input type="text" name="user_name" class="form-control" placeholder="Full name">
+                        <input type="text" name="name" class="form-control" placeholder="Full name">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-user"></span>
@@ -38,7 +38,7 @@
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="email" name="user_email" class="form-control" placeholder="Email">
+                        <input type="email" name="email" class="form-control" placeholder="Email">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-envelope"></span>
@@ -46,7 +46,7 @@
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="password" name="user_password" class="form-control" placeholder="Password">
+                        <input type="password" name="password" class="form-control" placeholder="Password">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-lock"></span>
@@ -54,7 +54,7 @@
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="password" name="user_password_retype" class="form-control"
+                        <input type="password" name="password_confirmation" class="form-control"
                             placeholder="Retype password">
                         <div class="input-group-append">
                             <div class="input-group-text">
