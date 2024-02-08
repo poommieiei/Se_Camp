@@ -31,6 +31,8 @@ Route::post('/register', [MyAuth::class, 'register_process']);
 Route::resource('titles', C_titles::class)->middleware('auth');
 
 
+
+
 Route::get('/my-controller', [MyController::class, 'index']);
 // Route::get('/my-controller2', 'App\Http\Controllers\MyController@index');
 // Route::namespace('App\Http\Controllers')->group(function(){
@@ -58,7 +60,6 @@ Route::post('/my-route', function(Request $req){
 });
 
 Route::get('/my-multiple', function(){
-
     return view('Myfolder.Multiplication_Table');
 });
 

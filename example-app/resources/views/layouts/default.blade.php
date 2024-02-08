@@ -32,6 +32,9 @@
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="#" class="nav-link">Contact</a>
                 </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="/multipication" class="nav-link">Multiplication</a>
+                </li>
             </ul>
 
             <!-- Right navbar links -->
