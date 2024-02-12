@@ -34,6 +34,8 @@ Route::get('/multiplication', function(){
     return view('titles.multiplication');
 });
 
+
+
 Route::get('/my-controller', [MyController::class, 'index']);
 // Route::get('/my-controller2', 'App\Http\Controllers\MyController@index');
 // Route::namespace('App\Http\Controllers')->group(function(){
