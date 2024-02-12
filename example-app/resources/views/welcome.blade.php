@@ -10,8 +10,6 @@
     <button onclick="alert('hello')">Click me!!!!!!</button>
     <input type="text" id="my_number" value="10">
     <button onclick="myFunction()"  class="btn btn-outline-success">submit</button>
-
-
     <br>
     <button onclick="myFunction2()">submit F 2</button>
     <h1 id="number"></h1>
@@ -26,9 +24,7 @@
 
 
         function myFunction(){
-            $('.my_gen_number').each(function(index, val) {
-                $(val).remove();
-            })
+            $('.my_gen_number').remove();
             let my_number = parseInt($('#my_number').val());
             $('#number').after(`<h1 class="my_gen_number"> ${"สูตรคูณแม่ : " + my_number} </h1>`);
             for (let i = 1; i <= 24; i++) {
